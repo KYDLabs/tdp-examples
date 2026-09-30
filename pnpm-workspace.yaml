@@ -1,0 +1,12 @@
+blockExoticSubdeps: true
+minimumReleaseAge: 2880
+minimumReleaseAgeStrict: true
+# Allow the quickstart's pinned SDK release before the two-day cutoff.
+minimumReleaseAgeExclude:
+  - "@tixprotocol/tdp-sdk@0.3.0"
+
+allowBuilds:
+  esbuild: true
+
+packages:
+  - quickstart
