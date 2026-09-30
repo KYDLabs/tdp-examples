@@ -1,0 +1,5 @@
+packages:
+  - quickstart
+
+allowBuilds:
+  esbuild: true
