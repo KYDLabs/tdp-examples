@@ -7,8 +7,8 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "events": "tsx list-events.ts",
-    "listings": "tsx list-listings.ts",
+    "events": "tsx --env-file=../.env list-events.ts",
+    "listings": "tsx --env-file=../.env list-listings.ts",
     "check": "tsc --noEmit"
   },
   "dependencies": {

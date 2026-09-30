@@ -6,13 +6,14 @@ Integration examples and starter projects for the TIX Developer Platform (TDP).
 
 ## Run the quickstart
 
-Set your `TDP_API_KEY` in `.env`, then from the repo's root:
+From the repo's root:
 
 ```bash
+pnpm install
 cp example.env .env
 ```
 
-Once your `.env` file is set, you can run the examples:
+Set `TDP_API_KEY` in `.env` to your sandbox API key with **Query Solana** permission, then run:
 
 ```bash
 pnpm --dir quickstart events
