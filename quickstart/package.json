@@ -9,7 +9,7 @@
   "scripts": {
     "events": "tsx --env-file=../.env list-events.ts",
     "listings": "tsx --env-file=../.env list-listings.ts",
-    "check": "tsc --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@tixprotocol/tdp-sdk": "0.3.0"

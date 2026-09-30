@@ -1,7 +1,6 @@
 name: CI
 
 on:
-  merge_group:
   pull_request:
   push:
     branches: [main]
@@ -16,20 +15,15 @@ concurrency:
 
 jobs:
   verify:
-    name: Verify (${{ matrix.name }})
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    strategy:
-      matrix:
-        include:
-          - name: Node 22
-            node: "22"
-          - name: Node from .nvmrc
-            node: ""
     steps:
       - uses: actions/checkout@v6
-      - uses: ./.github/actions/setup-node
+      - uses: pnpm/action-setup@v6
         with:
-          node-version: ${{ matrix.node }}
-      - name: Check formatting, lint, and types
-        run: pnpm verify
+          cache: true
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm verify

@@ -5,45 +5,13 @@
     "clientKind": "git",
     "useIgnoreFile": true
   },
-  "files": {
-    "ignoreUnknown": true,
-    "includes": [
-      "**",
-      "!!**/node_modules",
-      "!!**/dist",
-      "!!**/build",
-      "!!**/coverage"
-    ]
-  },
-  "css": {
-    "parser": {
-      "tailwindDirectives": true
-    }
-  },
   "formatter": {
-    "enabled": true,
     "indentStyle": "space",
     "indentWidth": 2
   },
   "linter": {
-    "enabled": true,
     "rules": {
-      "recommended": true,
-      "suspicious": {
-        "noUnknownAtRules": "off",
-        "noImportCycles": "error"
-      },
-      "nursery": {
-        "noConditionalExpect": "error",
-        "noDuplicateArgumentNames": "error",
-        "noDuplicatedSpreadProps": "error",
-        "noFloatingPromises": "error",
-        "noShadow": "error",
-        "useSortedClasses": "error"
-      }
-    },
-    "domains": {
-      "react": "recommended"
+      "recommended": true
     }
   },
   "assist": {

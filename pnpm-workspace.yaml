@@ -1,9 +1,5 @@
-blockExoticSubdeps: true
-minimumReleaseAge: 1440
-minimumReleaseAgeStrict: true
+packages:
+  - quickstart
 
 allowBuilds:
   esbuild: true
-
-packages:
-  - quickstart

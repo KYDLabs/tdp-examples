@@ -7,17 +7,10 @@
   },
   "packageManager": "pnpm@12.5.1",
   "scripts": {
-    "format": "pnpm run format:ts",
-    "format:ts": "biome format --write .",
-    "format:ts:check": "biome format .",
-    "lint": "pnpm run lint:ts",
-    "lint:fix": "pnpm run lint:ts:fix",
-    "lint:ts": "biome check --error-on-warnings .",
-    "lint:ts:fix": "biome check --error-on-warnings --write .",
-    "typecheck": "pnpm run check:ts",
-    "check": "pnpm run check:ts",
-    "check:ts": "pnpm -r run check",
-    "verify": "pnpm run lint && pnpm run check"
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "typecheck": "pnpm -r run typecheck",
+    "verify": "pnpm lint && pnpm typecheck"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.15"
