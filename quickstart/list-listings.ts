@@ -8,9 +8,10 @@ const client = createTdpClient({
   apiKey,
 });
 
-const eventId = process.argv[2]; // optional: an event_id from list-events
+const eventId = process.argv[2];
+if (!eventId) throw new Error("Pass an event_id from the events output.");
 const listings = await client.indexer.listActiveListings({
   limit: 10,
-  ...(eventId ? { eventId } : {}),
+  eventId,
 });
 console.log(JSON.stringify(listings, null, 2));

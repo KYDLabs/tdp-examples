@@ -17,10 +17,9 @@ Set `TDP_API_KEY` in `.env` to your sandbox API key with **Query Solana** permis
 
 ```bash
 pnpm --dir quickstart events
-pnpm --dir quickstart listings
 ```
 
-Each command prints one page of results. Pass an `event_id` from the events output to list only that event's listings:
+The command prints one page of events. Pass a non-null `event_id` from the output to list that event's active listings; the event ID is required:
 
 ```bash
 pnpm --dir quickstart listings 16159443462307518117
