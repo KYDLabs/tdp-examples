@@ -27,3 +27,18 @@ jobs:
           node-version-file: .nvmrc
       - run: pnpm install --frozen-lockfile
       - run: pnpm verify
+
+  marketplace-template:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: marketplace-template
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: marketplace-template/.nvmrc
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm verify

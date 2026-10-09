@@ -5,6 +5,9 @@
     "clientKind": "git",
     "useIgnoreFile": true
   },
+  "files": {
+    "includes": ["**", "!!marketplace-template"]
+  },
   "formatter": {
     "indentStyle": "space",
     "indentWidth": 2

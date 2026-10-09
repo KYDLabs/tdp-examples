@@ -1,0 +1,43 @@
+{
+  "name": "tdp-marketplace-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.15.0"
+  },
+  "scripts": {
+    "dev": "nodemon --watch server --watch .env --ext ts,json,env --exec \"tsx --env-file-if-exists=.env\" server/index.ts",
+    "build": "tsc --noEmit && vite build",
+    "start": "tsx --env-file-if-exists=.env server/index.ts --production",
+    "check": "tsc --noEmit && biome check --error-on-warnings .",
+    "format": "biome check --write .",
+    "test": "node --import tsx --test server/*.test.ts src/lib/*.test.ts",
+    "verify": "pnpm check && pnpm test && pnpm build"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "5.103.2",
+    "@tixprotocol/tdp-sdk": "0.5.0",
+    "express": "5.2.1",
+    "lucide-react": "1.48.0",
+    "oidc-client-ts": "3.5.0",
+    "radix-ui": "1.6.7",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.14",
+    "@tailwindcss/vite": "4.3.3",
+    "@types/express": "5.0.6",
+    "@types/node": "^24.0.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "nodemon": "3.1.14",
+    "tailwindcss": "4.3.3",
+    "tsx": "^4.23.0",
+    "typescript": "5.9.3",
+    "vite": "8.3.1"
+  },
+  "packageManager": "pnpm@12.5.1"
+}

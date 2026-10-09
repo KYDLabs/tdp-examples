@@ -1,0 +1,5 @@
+allowBuilds:
+  esbuild: true
+  lightningcss: true
+minimumReleaseAgeExclude:
+  - '@tixprotocol/tdp-sdk@0.5.0'

@@ -3,6 +3,7 @@
 Integration examples and starter projects for the TIX Developer Platform (TDP).
 
 - [Quickstart](quickstart/): Fetch upcoming events and active resale listings from the sandbox using the TypeScript SDK.
+- [Marketplace template](marketplace-template/): A runnable marketplace app with KYD sign-in, checkout, and resale.
 
 ## Run the quickstart
 
@@ -25,3 +26,16 @@ The command prints one page of events. Pass a non-null `event_id` from the outpu
 pnpm --dir quickstart listings 16159443462307518117
 ```
 
+
+## Run the marketplace template
+
+The marketplace template is a standalone project with its own dependencies, lockfile, and Node.js version (**24.15+**). Run it from its own directory:
+
+```bash
+cd marketplace-template
+pnpm install
+cp .env.example .env
+pnpm dev
+```
+
+See the [marketplace template README](marketplace-template/README.md) for the required credentials and KYD client setup.
