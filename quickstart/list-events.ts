@@ -8,5 +8,5 @@ const client = createTdpClient({
   apiKey,
 });
 
-const events = await client.indexer.listUpcomingEvents({ limit: 10 });
+const events = await client.events.list({ limit: 10 });
 console.log(JSON.stringify(events, null, 2));
