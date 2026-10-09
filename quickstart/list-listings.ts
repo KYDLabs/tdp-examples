@@ -10,7 +10,7 @@ const client = createTdpClient({
 
 const eventId = process.argv[2];
 if (!eventId) throw new Error("Pass an event_id from the events output.");
-const listings = await client.indexer.listActiveListings({
+const listings = await client.events.getListings({
   limit: 10,
   eventId,
 });
