@@ -173,8 +173,8 @@ importers:
   quickstart:
     dependencies:
       '@tixprotocol/tdp-sdk':
-        specifier: 0.5.0
-        version: 0.5.0(typescript@5.9.3)
+        specifier: ^0.6.0
+        version: 0.6.0(typescript@5.9.3)
     devDependencies:
       '@types/node':
         specifier: 22.20.4
@@ -783,8 +783,8 @@ packages:
       typescript:
         optional: true
 
-  '@tixprotocol/tdp-sdk@0.5.0':
-    resolution: {integrity: sha512-ZB5JNzVKU4LbC5nDrD6cTe+yejn4ZD/jvE7drbx2yZ1DCQWQnNN+ryj4n14/dkTHYMzf3JWTEDFbxJhJbC6InQ==}
+  '@tixprotocol/tdp-sdk@0.6.0':
+    resolution: {integrity: sha512-E6EdZafe/8MfjtoqWg8GPFvNrz07DVwIxIX0huitPGiqWg4s321FuaCl6tiB5Zg0go1yn3gkFj5STSFWMJSeQg==}
     engines: {node: '>=22.12.0'}
 
   '@types/node@22.20.4':
@@ -1425,7 +1425,7 @@ snapshots:
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
 
-  '@tixprotocol/tdp-sdk@0.5.0(typescript@5.9.3)':
+  '@tixprotocol/tdp-sdk@0.6.0(typescript@5.9.3)':
     dependencies:
       '@solana/kit': 6.10.0(typescript@5.9.3)
       zod: 4.6.5
