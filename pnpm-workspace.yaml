@@ -5,5 +5,4 @@ allowBuilds:
   esbuild: true
 
 minimumReleaseAgeExclude:
-  - '@tixprotocol/tdp-sdk@0.6.0'
-  - '@tixprotocol/tdp-sdk@0.7.0'
+  - '@tixprotocol/tdp-sdk@0.6.0 || 0.7.0 || 0.7.1'
